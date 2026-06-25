@@ -1014,6 +1014,90 @@ body {
 // -----------------------------------------------------------------------------
 // TIER 1 : TABLETS & SMALL LAPTOPS (≤1024px)
 // -----------------------------------------------------------------------------
+
+// ============================================================================
+// LARGE DESKTOPS (≥1600px)
+// ============================================================================
+@media (min-width: 1600px) {
+
+  .footer-section {
+
+    .info-block-links {
+
+      p {
+        padding-right: 550px; // keep original spacing
+      }
+    }
+  }
+}
+
+// ============================================================================
+// STANDARD DESKTOPS & LAPTOPS (1025px - 1599px)
+// ============================================================================
+@media (min-width: 1025px) and (max-width: 1599px) {
+
+  .footer-section {
+
+    .footer-top {
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+    }
+
+    .footer-info {
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: nowrap;
+    }
+
+    .info-block {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .info-block-links {
+
+      p {
+        // Override only on normal laptop screens
+        padding-right: 150px;
+        font-size: 18px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// SMALL LAPTOPS (1025px - 1366px)
+// ============================================================================
+@media (min-width: 1025px) and (max-width: 1366px) {
+
+  .footer-section {
+
+    .footer-top {
+      gap: 25px;
+    }
+
+    .footer-cta {
+      padding-right: 25px;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .info-block-links {
+
+      p {
+        padding-right: 50px;
+      }
+    }
+
+    .footer-bottom {
+      column-gap: 25px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
 
   // NAVBAR
