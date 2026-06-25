@@ -863,7 +863,7 @@ body {
       display: flex;
       align-items: center;
       gap: 12px;
-      padding-right: 550px;
+      padding-right: clamp(80px, 20vw, 450px);
       color: #d1d5db;
       font-size: 18px;
       cursor: pointer;
@@ -1022,19 +1022,38 @@ body {
 
   .footer-section {
 
+    .footer-top {
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+    }
+
+    .footer-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      flex-wrap: nowrap;
+    }
+
+    .info-block {
+      flex: 1;
+      min-width: 280px;
+    }
+
     .info-block-links {
 
       p {
-        padding-right: 550px; // keep original spacing
+        font-size: inherit;
+        padding-right: 450px; // Updated from 550px
+        white-space: nowrap;
       }
     }
   }
 }
 
 // ============================================================================
-// STANDARD DESKTOPS & LAPTOPS (1025px - 1599px)
+// STANDARD DESKTOPS (1367px - 1599px)
 // ============================================================================
-@media (min-width: 1025px) and (max-width: 1599px) {
+@media (min-width: 1367px) and (max-width: 1599px) {
 
   .footer-section {
 
@@ -1044,8 +1063,9 @@ body {
     }
 
     .footer-info {
+      display: flex;
       justify-content: space-between;
-      gap: 30px;
+      gap: 35px;
       flex-wrap: nowrap;
     }
 
@@ -1057,9 +1077,8 @@ body {
     .info-block-links {
 
       p {
-        // Override only on normal laptop screens
-        padding-right: 150px;
-        font-size: 18px;
+        font-size: inherit;
+        padding-right: 200px;
         white-space: nowrap;
       }
     }
@@ -1067,33 +1086,63 @@ body {
 }
 
 // ============================================================================
-// SMALL LAPTOPS (1025px - 1366px)
+// LAPTOPS (1025px - 1366px)
 // ============================================================================
 @media (min-width: 1025px) and (max-width: 1366px) {
 
   .footer-section {
 
     .footer-top {
-      gap: 25px;
+      grid-template-columns: 1fr 1.7fr;
+      gap: 30px;
+      align-items: center;
     }
 
     .footer-cta {
       padding-right: 25px;
 
       h2 {
-        font-size: 2rem;
+        font-size: inherit;
       }
+    }
+
+    .footer-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .info-block {
+      flex: 1 1 250px;
+      min-width: 220px;
     }
 
     .info-block-links {
 
       p {
-        padding-right: 50px;
+        padding-right: 80px;
+        font-size: inherit;
+        white-space: nowrap;
       }
     }
 
     .footer-bottom {
       column-gap: 25px;
+    }
+
+    .footer-bottom-center {
+
+      .tag-statement {
+        font-size: inherit;
+      }
+    }
+
+    .footer-bottom-right {
+
+      .copyright {
+        font-size: inherit;
+      }
     }
   }
 }
