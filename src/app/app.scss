@@ -975,7 +975,7 @@ body {
   .tag-statement {
     margin: 0;
 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
 
     letter-spacing: 3px;
@@ -994,12 +994,11 @@ body {
 // RIGHT SECTION
 .footer-bottom-right {
 
-  text-align: right;
-  padding-left: 20px;
+  text-align: center;
 
   .copyright {
     margin: 0;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5;
     color: #fff;
   }
@@ -1010,7 +1009,6 @@ body {
 // ============================================================================
 // RESPONSIVE DESIGN - Clean Cascade Interface Layers
 // ============================================================================
-
 
 // ============================================================================
 // LARGE DESKTOPS (≥1600px)
@@ -1038,6 +1036,7 @@ body {
     }
 
     .info-block-links {
+      flex-shrink: 0;
 
       p {
         font-size: 18px;
@@ -1046,16 +1045,30 @@ body {
       }
     }
 
+    // FOOTER BOTTOM
     .footer-bottom {
       column-gap: 40px;
+      grid-template-columns: auto auto auto;
     }
 
-    .tag-statement {
-      font-size: 25px;
+    .footer-bottom-left,
+    .footer-bottom-center,
+    .footer-bottom-right {
+      padding: 0 30px;
     }
 
-    .copyright {
-      font-size: 18px;
+    .footer-bottom-center {
+
+      .tag-statement {
+        font-size: 20px; // same as default
+      }
+    }
+
+    .footer-bottom-right {
+
+      .copyright {
+        font-size: 15px; // same as default
+      }
     }
   }
 }
@@ -1086,6 +1099,7 @@ body {
     }
 
     .info-block-links {
+      flex-shrink: 0;
 
       p {
         font-size: 18px;
@@ -1094,12 +1108,36 @@ body {
       }
     }
 
-    .footer-cta h2 {
-      font-size: 2.1rem;
+    .footer-cta {
+
+      h2 {
+        font-size: 2.1rem;
+      }
     }
 
     .footer-bottom {
       column-gap: 30px;
+      grid-template-columns: auto auto auto;
+    }
+
+    .footer-bottom-left,
+    .footer-bottom-center,
+    .footer-bottom-right {
+      padding: 0 25px;
+    }
+
+    .footer-bottom-center {
+
+      .tag-statement {
+        font-size: 20px;
+      }
+    }
+
+    .footer-bottom-right {
+
+      .copyright {
+        font-size: 15px;
+      }
     }
   }
 }
@@ -1130,15 +1168,16 @@ body {
       justify-content: space-between;
       align-items: flex-start;
       gap: 20px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     .info-block {
-      flex: 1 1 240px;
-      min-width: 240px;
+      flex: 1;
+      min-width: 220px;
     }
 
     .info-block-links {
+      flex-shrink: 0;
 
       p {
         font-size: 18px;
@@ -1149,19 +1188,27 @@ body {
 
     .footer-bottom {
       column-gap: 20px;
+      grid-template-columns: auto auto auto;
+    }
+
+    .footer-bottom-left,
+    .footer-bottom-center,
+    .footer-bottom-right {
+      padding: 0 20px;
     }
 
     .footer-bottom-center {
 
       .tag-statement {
-        font-size: 22px;
+        font-size: 20px; // keep default
+        letter-spacing: 2px;
       }
     }
 
     .footer-bottom-right {
 
       .copyright {
-        font-size: 18px;
+        font-size: 15px; // keep default
       }
     }
   }
