@@ -1011,9 +1011,6 @@ body {
 // RESPONSIVE DESIGN - Clean Cascade Interface Layers
 // ============================================================================
 
-// -----------------------------------------------------------------------------
-// TIER 1 : TABLETS & SMALL LAPTOPS (≤1024px)
-// -----------------------------------------------------------------------------
 
 // ============================================================================
 // LARGE DESKTOPS (≥1600px)
@@ -1023,29 +1020,42 @@ body {
   .footer-section {
 
     .footer-top {
-      grid-template-columns: 1fr 2fr;
-      gap: 60px;
+      grid-template-columns: 1.1fr 2fr;
+      gap: 50px;
     }
 
     .footer-info {
       display: flex;
       justify-content: space-between;
-      gap: 50px;
+      align-items: flex-start;
+      gap: 40px;
       flex-wrap: nowrap;
     }
 
     .info-block {
       flex: 1;
-      min-width: 280px;
+      min-width: 320px;
     }
 
     .info-block-links {
 
       p {
-        font-size: inherit;
-        padding-right: 450px; // Updated from 550px
+        font-size: 18px;
         white-space: nowrap;
+        padding-right: 450px;
       }
+    }
+
+    .footer-bottom {
+      column-gap: 40px;
+    }
+
+    .tag-statement {
+      font-size: 25px;
+    }
+
+    .copyright {
+      font-size: 18px;
     }
   }
 }
@@ -1058,14 +1068,15 @@ body {
   .footer-section {
 
     .footer-top {
-      grid-template-columns: 1fr 2fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 35px;
     }
 
     .footer-info {
       display: flex;
       justify-content: space-between;
-      gap: 35px;
+      align-items: flex-start;
+      gap: 25px;
       flex-wrap: nowrap;
     }
 
@@ -1077,24 +1088,32 @@ body {
     .info-block-links {
 
       p {
-        font-size: inherit;
-        padding-right: 200px;
+        font-size: 18px;
         white-space: nowrap;
+        padding-right: 180px;
       }
+    }
+
+    .footer-cta h2 {
+      font-size: 2.1rem;
+    }
+
+    .footer-bottom {
+      column-gap: 30px;
     }
   }
 }
 
 // ============================================================================
-// LAPTOPS (1025px - 1366px)
+// SMALL LAPTOPS (1025px - 1366px)
 // ============================================================================
 @media (min-width: 1025px) and (max-width: 1366px) {
 
   .footer-section {
 
     .footer-top {
-      grid-template-columns: 1fr 1.7fr;
-      gap: 30px;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 25px;
       align-items: center;
     }
 
@@ -1102,50 +1121,56 @@ body {
       padding-right: 25px;
 
       h2 {
-        font-size: inherit;
+        font-size: 2rem;
       }
     }
 
     .footer-info {
       display: flex;
       justify-content: space-between;
-      gap: 25px;
+      align-items: flex-start;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     .info-block {
-      flex: 1 1 250px;
-      min-width: 220px;
+      flex: 1 1 240px;
+      min-width: 240px;
     }
 
     .info-block-links {
 
       p {
-        padding-right: 80px;
-        font-size: inherit;
+        font-size: 18px;
+        padding-right: 50px;
         white-space: nowrap;
       }
     }
 
     .footer-bottom {
-      column-gap: 25px;
+      column-gap: 20px;
     }
 
     .footer-bottom-center {
 
       .tag-statement {
-        font-size: inherit;
+        font-size: 22px;
       }
     }
 
     .footer-bottom-right {
 
       .copyright {
-        font-size: inherit;
+        font-size: 18px;
       }
     }
   }
 }
+
+// -----------------------------------------------------------------------------
+// TIER 1 : TABLETS & SMALL LAPTOPS (≤1024px)
+// -----------------------------------------------------------------------------
+
 
 @media (max-width: 1024px) {
 
